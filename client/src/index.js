@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import List from './List';
+import './style.css';
+
+var urgentActivities = [];
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <List id = "urgent"/>,
+  document.getElementById('urgent')
+);
+
+ReactDOM.render(
+  <List id = "casual"/>,
+  document.getElementById('casual')
+);
+
+ReactDOM.render(
+  <List id = "moderate"/>,
+  document.getElementById('moderate')
 );

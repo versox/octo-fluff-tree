@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -16,6 +22,128 @@
     <title>React App</title>
   </head>
   <body>
+    <header>
+        <button type='button' onclick="openNav()" class="menu" id="menubutton"><i class="fa fa-bars"></i></button>
+        <p>Reminders</p>
+    </header>
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul>
+        <li>
+         <a>Home</a>
+       </li>
+       <li>
+        <a>profile</a>
+       </li>
+       <li>
+        <a>month</a>
+       </li>
+       <li>
+        <a>week</a>
+       </li>
+    </ul>
+   </div>
+
+      <div id="date">
+          <p>◀</p>
+          <h1>
+              Sunday, May 26th
+          </h1>
+         <p>▶</p>
+      </div>
+
+
+
+
+
+
+    <div id="main" class="container">
+
+      <div id="events">
+          <h2>
+              events
+          </h2>
+
+          <ul class="event">
+              <li id="blue">Coffee</li>
+              <li id="pink">Tea</li>
+              <li id="purple">Milk</li>
+              <li id="pink">Coffee</li>
+              <li id="blue">Tea</li>
+              <li id="green">Milk</li>
+              <li id="pink">Coffee</li>
+              <li id="blue">Tea</li>
+              <li id="purple">Milk</li>
+          </ul>
+      </div>
+
+
+
+
+
+      <div id="activities">
+          <h2>
+            activities
+          </h2>
+
+          <div id="urgent"> </div>
+
+          <div id="moderate"> </div>
+
+          <div id="casual"> </div>
+
+      </div>
+
+
+
+
+
+
+
+      <div class="box">
+        <div id="whatshappening">
+          <h2>
+            weather
+          </h2>
+
+            <div class="weather">
+                look at this weather
+            </div>
+
+        </div>
+
+        <div id="bag">
+          <h2>
+            what to pack
+          </h2>
+            <div class="bag">
+                look at this bag
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+   <script>
+   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+   function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+       document.getElementById("main").style.marginLeft = "250px";
+       //document.getElementById("fool").style.marginLeft = "250px";
+       document.getElementById("menubutton").style.left = "300px";
+   }
+
+   /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+   function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+       document.getElementById("main").style.marginLeft = "0";
+       //document.getElementById("fool").style.marginLeft = "0";
+       document.getElementById("menubutton").style.left = "50px";
+   }
+   </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
