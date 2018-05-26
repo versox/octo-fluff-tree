@@ -3,6 +3,19 @@ const express = require('express');
 
 const app = express();
 
+var mysql = require('mysql');
+
+/*var con = mysql.createConnection({
+  host: "DESKTOP-J3R1J7D",
+  user: "root",
+  password: "root"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});*/
+
 // API endpoints go here!
 
 
