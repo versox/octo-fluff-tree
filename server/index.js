@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-var mysql = require('mysql');
+// var mysql = require('mysql');
 /*var con = mysql.createConnection({
   host: "DESKTOP-J3R1J7D",
   user: "root",
@@ -20,7 +20,7 @@ con.connect(function(err) {
 var activities = [];
 
 // Serve the built client
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+//app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // Unhandled requests which aren't for the API should serve index.html so
 // client-side routing using browserHistory can function
@@ -30,10 +30,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 //     res.sendFile(index);
 // });
 //
-// app.post("/createActivity", function (req, res) {
-//     //activities.push(req.body.name);
-//     console.log(req.body.activityName);
-// });
+
 
 // app.get("/activities", function (req, res) {
 //     res.send("hello");

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../fluffy-octo-palm-tree/fonts/ProximaNova-Regular.otf" rel="stylesheet">
+    <link rel="stylesheet" href="assets/basic-layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+    <title>fluffy-octo-palm-tree</title>
+  </head>
+  <body>
+
+
+    <header>
+        <button type='button' onclick="openNav()" class="menu" id="menubutton"><i class="fa fa-bars"></i></button>
+        <p>prioritize</p>
+    </header>
+
+
+
+
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3>prioritize</h3>
+      <ul>
+        <li>
+         <a>Home</a>
+       </li>
+       <li>
+        <a>profile</a>
+       </li>
+       <li>
+        <a>month</a>
+       </li>
+       <li>
+        <a>week</a>
+       </li>
+    </ul>
+   </div>
+
+
+
+
+
+      <div class="containerEVENT" id="coneve">
+
+          <form action="http://192.168.0.23:8080">
+
+                            <button type='button' onclick="openAct()" class="switch blue" id="switchbutton2"><H2>Add Event</H2></button>
+              <button type='button' onclick="openAct()" class="switch grey" id="switchbutton2"><H2>Add Activity</H2></button>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Event Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="activName" name="activityName" placeholder="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Location</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="loc" name="location" placeholder="">
+              </div>
+            </div>
+
+              <div class="row">
+              <div class="col-25">
+                <label for="lname">Date &amp; Time</label>
+              </div>
+              <div class="col-month">
+                <input type="text" id="lname" name="lastname" placeholder="MM/DD/YY">
+              </div>
+                  <div class="col-month">
+ <input type="text" id="lname" name="lastname" placeholder="00:00 EDT">
+              </div>
+            </div>
+
+
+              <div class="row">
+              <div class="col-25">
+                <label for="lname">What to Bring</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Notes</label>
+              </div>
+              <div class="col-75">
+                <textarea id="Notes" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <input type="submit" value="Create">
+            </div>
+
+
+
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="containerACTIVITY" id="activ">
+
+          <form action="http://192.168.0.23:8080" >
+
+                <button type='button' onclick="openEve()" class="switch blue" id="switchbutton"><h2>ADD EVENT</h2></button>
+              <button type='button' onclick="openEve()" class="switch grey" id="switchbutton2"><h2>ADD ACTIVITY</h2></button>
+
+
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Event Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="activName" name="acticityName" placeholder="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Priority</label>
+              </div>
+
+              <div class="col-75">
+                <select id="priority" name="priority">
+                  <option value="australia">Urgent</option>
+                  <option value="canada">Moderate</option>
+                  <option value="usa">Casual</option>
+                </select>
+              </div>
+            </div>
+
+
+              <div class="row">
+              <div class="col-25">
+                <label for="lname">What to Bring</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="item" name="items" placeholder="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Notes</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <input type="submit" value="Create">
+            </div>
+
+
+
+
+
+          </form>
+        </div>
+
+   <script>
+   /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+   function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+       document.getElementById("main").style.marginLeft = "250px";
+
+document.getElementById("date").style.marginLeft = "250px";
+
+/*document.getElementById("date").style.marginLeft = "250px"; */
+       //document.getElementById("fool").style.marginLeft = "250px";
+       document.getElementById("menubutton").style.left = "300px";
+   }
+
+   /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+   function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+       document.getElementById("main").style.marginLeft = "0";
+
+document.getElementById("date").style.marginLeft = "0";
+
+/*document.getElementById("date").style.marginLeft = "0";*/
+       //document.getElementById("fool").style.marginLeft = "0";
+       document.getElementById("menubutton").style.left = "50px";
+   }
+   function openAct() {
+     document.getElementById("activ").style.zIndex = 15;
+   }
+   function openEve() {
+     document.getElementById("activ").style.zIndex = 5;
+   }
+   </script>
+
+
+  </body>
+  </html>

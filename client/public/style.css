@@ -371,7 +371,7 @@ label {
     margin-left: auto;
     margin-right: auto;
     width: 600px;
-    height: 400px;
+    height: 450px;
     z-index: 10;
     color: #296ff4;
 }
@@ -384,7 +384,7 @@ label {
     margin-right: auto;
     width: 600px;
     color: white;
-    height: 400px;
+    height: 450px;
 
 }
 
@@ -417,6 +417,7 @@ label {
     background-color: #296ff4;
     color: white;
     border: 0;
+    height: 45px
     /*border-color: #296ff4;
     border: 3px solid;
     color: #296ff4;*/
@@ -427,6 +428,7 @@ label {
     border: 1px solid;
     border-color: #296ff4;
     color: #296ff4;
+    height: 45px
 }
 
 .containerACTIVITY input[type=submit] {

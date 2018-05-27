@@ -17,22 +17,48 @@ function processRequest(e) {
   }
 }
 
+// urgent items
+var urgentItems = [
+  "Finish hackathon project",
+  "Take a nap"
+  ];
+
 ReactDOM.render(
-  <List id = "urgent" classS = "draggable"/>,
+  <List id = "urgent" classS = "draggable" items = {urgentItems}/>,
   document.getElementById('urgent')
 );
 
-ReactDOM.render(
-  <List id = "casual"/>,
-  document.getElementById('casual')
-);
+var moderateItems = [
+  "Call mom",
+  "Schedule dentist appointment",
+  "Practice french"];
 
 ReactDOM.render(
-  <List id = "moderate"/>,
+  <List id = "moderate" classS = "draggable" items = {moderateItems}/>,
   document.getElementById('moderate')
 );
 
+var casualItems = [
+  "Hang out with Miles",
+  "Practice guitar",
+  "Win hackathon"];
+
 ReactDOM.render(
-  <List colorful = "true" classS = "event"/>,
+  <List id = "casual" classS = "draggable" items = {casualItems}/>,
+  document.getElementById('casual')
+);
+
+var eventItems = [
+  "8:00  AM Project Submission",
+  "8:00  AM Room Allocation for Demos",
+  "9:00  AM Brunch",
+  "12:00 PM Project Demo to Judges",
+  "2:30  PM Closing Ceremony",
+  "4:30  PM GO Train home",
+  "6:00  PM Gym",
+  "8:00  PM Dinner date with Jess"];
+
+ReactDOM.render(
+  <List colorful = "true" classS = "event" items = {eventItems}/>,
   document.getElementById('eventsHolder')
 )

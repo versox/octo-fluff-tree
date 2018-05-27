@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import ListItem from './ListItem';
 import interact from 'interactjs';
 
-var listOfThings = ["world", "the", "hi"];
 var colors = ["purple", "blue", "green", "pink"];
 
 class List extends Component {
   render() {
     let items = [];
+    let listOfThings = this.props.items;
     for (var i = 0; i < listOfThings.length; i++)
     {
       if(this.props.colorful == "true")
       {
           var colorI = i % 4;
-          items.push(<ListItem name={listOfThings[i]} id={colors[i]} classS={this.props.classS}/>);
+          items.push(<ListItem name={listOfThings[i]} id={colors[colorI]} classS={this.props.classS}/>);
       }
       else
       {

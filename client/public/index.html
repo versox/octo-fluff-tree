@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../fluffy-octo-palm-tree/fonts/ProximaNova-Regular.otf" rel="stylesheet">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"> </script>
     <script src="drag.js"> </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-2.2.4.js"
     integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
@@ -26,12 +28,20 @@
   <body>
     <header>
         <button type='button' onclick="openNav()" class="menu" id="menubutton"><i class="fa fa-bars"></i></button>
-        <p>Reminders</p>
+        <p>prioritize</p>
+        <div class="button" id="monthly">Monthly</div>
+        <div class="button" id="weekly">Weekly</div>
+        <div class="button" id="daily">Daily</div>
     </header>
+
+
+
+
 
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3>prioritize</h3>
       <ul>
         <li>
          <a>Home</a>
@@ -46,7 +56,38 @@
         <a>week</a>
        </li>
     </ul>
+
+
+
+
+
    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div id="date">
           <p>◀</p>
@@ -55,6 +96,16 @@
           </h1>
          <p>▶</p>
       </div>
+
+
+      <div class="create">
+          <a href="%PUBLIC_URL%/create.html"><img src="%PUBLIC_URL%/create_icon.png" width="100px"></a>
+      </div>
+
+
+
+
+
 
 
 
@@ -98,21 +149,27 @@
       <div class="box">
         <div id="whatshappening">
           <h2>
-            weather
+            What's Happening
           </h2>
 
             <div class="weather">
-                look at this weather
-            </div>
+                <img src="%PUBLIC_URL%/weather.jpg" width="220px">
+                <p><font color="white">Partly Cloudy</font></p>
 
+            </div>
         </div>
+
+
+
+
+
 
         <div id="bag">
           <h2>
             what to pack
           </h2>
             <div class="bag">
-                look at this bag
+                Select event on your schedule to see what you need to pack and prepare!
             </div>
         </div>
       </div>
@@ -120,11 +177,20 @@
     </div>
 
 
+
+
+
+
+
    <script>
    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
    function openNav() {
        document.getElementById("mySidenav").style.width = "250px";
        document.getElementById("main").style.marginLeft = "250px";
+
+document.getElementById("date").style.marginLeft = "250px";
+
+/*document.getElementById("date").style.marginLeft = "250px"; */
        //document.getElementById("fool").style.marginLeft = "250px";
        document.getElementById("menubutton").style.left = "300px";
    }
@@ -133,20 +199,15 @@
    function closeNav() {
        document.getElementById("mySidenav").style.width = "0";
        document.getElementById("main").style.marginLeft = "0";
+
+document.getElementById("date").style.marginLeft = "0";
+
+/*document.getElementById("date").style.marginLeft = "0";*/
        //document.getElementById("fool").style.marginLeft = "0";
        document.getElementById("menubutton").style.left = "50px";
    }
    </script>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
   </body>
-</html>
+  </html>
