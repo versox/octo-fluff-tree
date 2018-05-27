@@ -6,9 +6,10 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "mysql": "2.15.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "mysql": "2.15.0"
+    "react-interactjs": "^0.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

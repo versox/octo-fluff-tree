@@ -116,7 +116,7 @@ h2 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+  grid-template-columns: 1fr 1fr 1fr ; /* fraction*/
   height:80%;
   grid-column-gap: 5%;
 }
@@ -171,7 +171,7 @@ li {
 }
 
 
-.event li {
+.event {
     background-color: #e6e7e8;
 }
 
